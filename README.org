@@ -1,0 +1,29 @@
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil expand-links:t f:t
+#+options: inline:t num:t p:nil pri:nil prop:nil stat:t tags:t
+#+options: tasks:t tex:t timestamp:t title:t toc:t todo:t |:t
+#+title: README
+#+date: <2024-10-05 Sat>
+#+author:
+#+email: thomas@raspberrypi
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 28.2 (Org mode 9.8-pre)
+#+cite_export:
+
+* Description
+
+This repository contains GNU Emacs GTK running in KasmVNC. This allows users to run Emacs in a web browers from anywhere from their self-hosted server. Linuxserver.io's KasmVNC base image is used as the base upon which this image is built upon.
+
+* Installation
+
+1. Download the git repository
+2. Build the Docker image with ~docker build -t emacs-docker .~
+3. Modify ~docker-compose.yaml~ to your liking. You can configure you Emacs configuration to one of the followng:
+   1. ~/home/username/.emacs.d:/config/.emacs.d~
+   2. ~/home/username/.emacs:/config/.emacs~
+   3. ~/home/username/.emacs.d:/config/.config/emacs~
+4. Modify ~stack.env~ to utilize the correct environment variables
+5. Run the container with ~docker-compose up -d~

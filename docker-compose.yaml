@@ -1,0 +1,14 @@
+---
+services:
+  emacs:
+    image: emacs-docker:latest
+    container_name: emacs
+    ports:
+      - "3000:3000"
+    env_file:
+      - stack.env
+    volumes:
+      - /path/to/.emacs.d:/config/.emacs.d
+    restart: unless-stopped
+...
+    
