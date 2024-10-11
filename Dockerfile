@@ -4,7 +4,7 @@ FROM ghcr.io/linuxserver/baseimage-kasmvnc:debianbookworm
 #ARG BUILD_DATE
 #ARG EMACS_VERSION
 #ARG VERSION
-#LABEL build_version="Linuxserver.io version:- ${VERSION} Build-date:- ${BUILD_DATE}"
+#LABEL build_version="emacs-gtk-docker version:- ${VERSION} Build-date:- ${BUILD_DATE}"
 #LABEL maintainer="tfree87"
 
 # title
@@ -14,6 +14,9 @@ RUN \
   echo "**** install packages ****" && \
   apt-get update && \
   apt-get install --no-install-recommends -y \
+    hunspell \
+    fonts-hack-ttf \
+    fonts-liberation \
     emacs \
     git && \
   echo "**** cleanup ****" && \
