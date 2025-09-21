@@ -13,6 +13,8 @@
 #+creator: Emacs 28.2 (Org mode 9.8-pre)
 #+cite_export:
 
+*NOTE: This repository is being archived and future Emacs Docker updates will be found on Codeberg.org here: [[https://codeberg.org/TheTimeTombs/docker-emacs]]*
+
 * Description
 
 This repository contains GNU Emacs GTK running in KasmVNC. This allows users to run Emacs in a web browers from anywhere from their self-hosted server. Linuxserver.io's KasmVNC base image is used as the base upon which this image is built upon.
